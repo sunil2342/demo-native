@@ -24,10 +24,7 @@ class WebViewActivity : AppCompatActivity() {
     private lateinit var videoView: VideoView
     private lateinit var ivBackward:ImageView
     private lateinit var ivForward:ImageView
-    // comment this once your implementation done
-    private var WEB_URL = "https://dev.softraw.com/web.html"
-    // use this once your implementation done
-    // private var WEB_URL = "https://experience-dev.sourcesync.io/today-home-owner-overlay"
+    private var WEB_URL = "https://experience-dev.sourcesync.io/today-home-owner-overlay"
     private var isPlay: Boolean = false
     private var isFirstTime: Boolean = true
     private lateinit var ivPlayPause: ImageView
@@ -96,7 +93,7 @@ class WebViewActivity : AppCompatActivity() {
 
     }
 
-    fun emit(listener: String) {
+    fun emit(listener: String, listener1: String, listener2: String) {
         // do whatever you want to do with listener you will get play/pause/seek
         println("postMessage======= " + listener)
     }
