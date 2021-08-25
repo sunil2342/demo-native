@@ -17,8 +17,8 @@ public class JavaScriptInterface{
     }
 
     @JavascriptInterface
-    public void emit(String listener, String listener1, String listener2) {
+    public void emit(String listener, String listener1) {
         System.out.println("postMessage======= "+listener) ;
-        activity.emit(listener,listener1,listener2);
+        activity.emit(listener,listener1);
     }
 }

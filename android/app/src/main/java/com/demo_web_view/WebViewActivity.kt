@@ -93,7 +93,7 @@ class WebViewActivity : AppCompatActivity() {
 
     }
 
-    fun emit(listener: String, listener1: String, listener2: String) {
+    fun emit(listener: String, listener1: String) {
         // do whatever you want to do with listener you will get play/pause/seek
         println("postMessage======= " + listener)
     }
