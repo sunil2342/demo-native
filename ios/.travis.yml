@@ -1,0 +1,15 @@
+language: objective-c
+osx_image: xcode11.3
+
+install:
+  - brew install swiftlint swiftformat
+
+script:
+  - xcodebuild -project ./Demo/WKJavaScriptController-Demo.xcodeproj -scheme WKJavaScriptController-Demo -destination "platform=iOS Simulator,name=iPhone 7,OS=11.4" -configuration Debug ONLY_ACTIVE_ARCH=NO > >(xcpretty -c)
+
+notifications:
+  email: false
+  slack:
+    rooms:
+      secure: UT7XfIcfY5xSszbOEQOxc32AFtFmSuXxBjqH8GYR7fDJ1PCVfkDnWECUCOYX43bslhppJUpU/v5lFp18IDWiiPkDJoQzub+KASrIn+4U+3wEMlnX48cXq9C21lNpjaCFLjHINE0KF+Yped69NHBn8wn0zXggJnk0ny1Gy0G4LNFLB3n5DISJBRn/lm33sPUEva/ntLQ+Szm8aA7DGaVE79A+jYuKZDraZiDUwBuw7Rg9AqVvt7xijmEhMioZ2ECExMrI+Fl3YyViRN5hxwVm+39d4vAD6nO6NPOatvJtjK9/us2WSEBzDB73rL5oh3mOWiIcy18gYc0DGcEgRpTpxO7GLMSNcv/U17/unzqIgmH6FzpzDCsUyL2A8Dz0jCaDhNqBd46pfPaigc9kxBDbjRgV2ckumOrDSlHQFz9S1mt02UfmB1sU+s4iFRvXXhdsmrDQsdkjuCjlrRr2FXHcJ6+wlFIcDrYl+WumSjs9sce34tNbvhNvvpfr2Q2K+1FsWPmooXXc2AUp+h6RgPzS4+PDnNxA41Ke8Y58Cq+OITINBGJhoWjrO4DfoSgoUyVwKTXg8FQpaWZVs9lfZKX6yH+eiC2Bw9Jk5BvN81Bu/5Jq/u4I/f47oC2jD+7ILUQ9g/9y0+jdAnTpLa6nSYOwux8guBhsDS4/trishOhm1Pc=
+    on_success: change
